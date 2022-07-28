@@ -1,0 +1,29 @@
+ sudo apt-get install default-jre default-jdk
+
+
+dava dostap do opredelena papka
+chmod -R 777 /usr/lib/jvm/
+
+
+
+
+
+
+https://www.kali.org/docs/general-use/kali-linux-sources-list-repositories/
+https://www.youtube.com/watch?v=2qUWMXHeRNk
+https://www.youtube.com/watch?v=7iSioyPEAIU
+
+https://www.youtube.com/watch?v=yr7n0C2tspI
+
+sudo apt install python3-pip
+pip3 install kivy
+pip3 install buildozer
+sudo apt update
+sudo apt install -y git zip unzip openjdk-8-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev
+pip3 install  Cython==0.29.19
+export PATH=$PATH:~/.local/bin/
+buildozer init
+buildozer -v android debug - File
+
+
+buildozer android debug deploy run - From Handy
